@@ -1,6 +1,6 @@
 # deneme
 
-a
+adeneme yaptim
 
 
 
