@@ -1,0 +1,286 @@
+
+
+## Mac / Bash
+
+### Git Bash 
+
+* `pwd`: konum verir
+
+```bash
+$ pwd
+/c/Users/talfi/devops/Git/gitqa
+```
+
+* `mkdir`: klasor olusturur. **ORTAK**
+
+```bash
+$ mkdir deneme
+```
+* `cd`: directory degistirir. **ORTAK**
+
+```bash
+$ cd deneme # veya
+
+$ cd /c/Users/talfi/devops/Git/gitqa/deneme 
+```
+
+* `cat > dosya adi`: yeni bir dosya olustur.(Cikmak icin crtl + d'ya basin)
+
+* `echo 'input'` > dosyaadi da yeni bir dosya olusturur.
+
+```bash
+
+```
+* `ls`: Directory'deki dosyalari & klasorleri listeler/dondurur.
+
+```bash
+$ ls
+deneme.txt  deneme1.txt
+```
+
+* `cat` : Dosyanin icindeki degerleri gormek icin kullanilir.
+
+```bash
+$ cat deneme1.txt
+```
+
+* `rm`: Dosya Siler.
+
+```bash
+$ rm deneme1.txt
+
+$ $ ls
+deneme.txt
+```
+
+* `mv` : Klasor & Dosya ismi degistirir.
+
+```bash
+# Dosya Ismi Degistirme
+$ mv deneme.txt deneme2.txt
+$ ls
+deneme2.txt
+
+# Klasor Ismi Degistirme. Bunun icin oncelikle yeni bir klasor olsuturalim(deneme2)
+$ mkdir denemedeneme
+# Sonrasinda mv komutunu kullanalim
+$ mv denemedeneme deneme2
+# ls ile degisiklikleri kontrol edelim
+$ ls
+deneme2/  deneme2.txt
+```
+
+* `rmdir` : klasor siler.(remove directory demektir zaten) **ORTAK**
+
+```bash
+$ rmdir deneme2
+
+$ ls
+deneme2.txt
+```
+
+* `clear`: Ekrandaki ciktilari temizler.
+
+```bash
+$ clear
+```
+
+## Windows
+
+### Git CMD
+
+* `cd`: bos yazarsak konum verir
+
+```cmd
+C:\Users\talfi>cd
+C:\Users\talfi
+```
+* `dir`: Directory'deki dosya & klasorleri listeler.
+
+```cmd
+
+C:\Users\talfi>dir
+ Volume in drive C is Windows-SSD
+ Volume Serial Number is 884C-B33E
+
+ Directory of C:\Users\talfi
+
+04/03/2022  13:20    <DIR>          .
+19/01/2022  17:44    <DIR>          ..
+18/03/2022  16:52             7.352 .bash_history
+23/01/2022  14:03    <DIR>          .conda
+23/01/2022  14:02                25 .condarc
+23/01/2022  14:02    <DIR>          .continuum
+20/01/2022  18:52                80 .gitconfig
+23/01/2022  14:13    <DIR>          .ipynb_checkpoints
+23/01/2022  14:05    <DIR>          .ipython
+23/01/2022  17:51    <DIR>          .jupyter
+20/01/2022  21:10                20 .lesshst
+16/02/2022  23:43    <DIR>          .matplotlib
+29/01/2022  17:51    <DIR>          .redhat
+01/02/2022  19:27    <DIR>          .ssh
+04/02/2022  20:15            15.853 .viminfo
+19/01/2022  17:32    <DIR>          .vscode
+16/03/2022  19:51    <DIR>          anaconda3
+20/01/2022  00:42    <DIR>          ansel
+19/01/2022  17:27    <DIR>          Contacts
+31/01/2022  07:43        32.567.824 Day-1-10 - Cloud and AWS Introduction.zip
+31/01/2022  01:40             1.674 deneme.pem
+17/03/2022  14:47    <DIR>          Desktop
+18/03/2022  16:33    <DIR>          devops
+16/03/2022  09:35    <DIR>          Documents
+17/03/2022  14:47    <DIR>          Downloads
+19/01/2022  17:27    <DIR>          Favorites
+19/01/2022  17:27    <DIR>          Links
+19/01/2022  17:27    <DIR>          Music
+29/01/2022  17:17    <DIR>          OneDrive
+19/01/2022  17:28    <DIR>          Pictures
+10/03/2022  20:04    <DIR>          python
+19/01/2022  17:27    <DIR>          Saved Games
+19/01/2022  17:44    <DIR>          Searches
+21/01/2022  12:02                 0 then
+10/02/2022  02:06    <DIR>          Videos
+               8 File(s)     32.592.828 bytes
+              27 Dir(s)  61.737.553.920 bytes free
+
+```
+
+* `cls`: Ekrani temizler.
+
+```cmd
+cls
+```
+
+* `more`: Dosyanin icindeki degeri gormemizi saglar.
+
+```bash
+# Directory'yi degistirelim
+cd C:\Users\talfi\devops\deneme1
+
+# Dosyanin icindeki degeri gorelim
+more deneme2.txt
+Bu bir deneme dosyasidir
+```
+
+* `ren`: Klasor ve Dosya ismi degistirmede kullaniriz.
+
+```cmd
+ren deneme2.txt deneme3.txt
+dir
+deneme3.txt
+```
+
+* `del`: Dosya silmede kullaniriz.
+
+```cmd
+del deneme3.txt
+dir
+```
+
+
+
+
+
+
+## Git Practice
+
+* Git Bash'i ac ve Directory'yi tekrar set et.
+
+```bash
+cd devops/Git/gitqa/ilkders
+```
+
+* `git init` yap.
+
+```bash
+$ git init
+```
+
+* Working Space'i acikla.
+
+* `ls` yap.
+
+* `git add dosyaadi` ve `git add .` i dene. Bunun icin gerekirse yeni dosyalar olusturabilirsin.
+
+```bash
+$ git add 1.md
+```
+
+* Staging Area'yi acikla.
+
+* Burada henuz girilmediyse `git config` girilebilir.
+
+```bash
+$ git config user.email
+$ git config user.name
+```
+* `git status` u dene.
+
+
+```bash
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   1.md
+        new file:   deneme1.txt
+        new file:   deneme2.txt
+
+```
+
+* `git commit -m "Bu bizim ilk commitimiz"` de.
+
+
+```bash
+$ git commit -m "Bu bizim ilk commitimiz"
+[master (root-commit) 387c0a9] Bu bizim ilk commitimiz
+ 3 files changed, 245 insertions(+)
+ create mode 100644 1.md
+ create mode 100644 deneme1.txt
+ create mode 100644 deneme2.txt
+```
+
+* Commit Store
+
+* `git log` u dene.
+
+```bash
+$ git log
+commit 387c0a9cd5637552e16a816eb9a76fe6c55905ad (HEAD -> master)
+Author: talfik2 <talfik2@yandex.com>
+Date:   Sat Mar 19 12:25:21 2022 +0100
+
+    Bu bizim ilk commitimiz
+```
+
+* `git show HASH 5` i de dene ve bugunu sonlandir.(Cikmak icin shift + q veya q)
+
+```bash
+commit 387c0a9cd5637552e16a816eb9a76fe6c55905ad (HEAD -> master)
+Author: talfik2 <talfik2@yandex.com>
+Date:   Sat Mar 19 12:25:21 2022 +0100
+
+    Bu bizim ilk commitimiz
+
+diff --git a/1.md b/1.md
+new file mode 100644
+index 0000000..3effe06
+--- /dev/null
++++ b/1.md
+@@ -0,0 +1,243 @@
++
++
++## Mac / Bash
++
++### Git Bash
++
++* `pwd`: konum verir
++
++```bash
++$ pwd
++/c/Users/talfi/devops/Git/gitqa
+
+```
